@@ -1,0 +1,58 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-blue-dark: #09396A;
+    --clr-blue-light: #8AC0F8;
+    --clr-blue: #2163A8;
+    --clr-grey: #D3D3D3;
+}
+
+body {
+    background-color: var(--clr-blue-dark);
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    display: flex;
+}
+
+.logo img {
+    width: 125px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 60px;
+}
+
+.invoice-data {
+    display: flex;
+}
+
+.invoice-data-el {
+    margin-left: 60px;
+}
+
+.invoice-data h2 {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: 700;
+    margin-top: 25px;
+}
+
+.invoice-data p {
+    font-size: .7rem;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom:0;
+    letter-spacing: .2rem;
+}
+
+.invoice-data-num {
+    color: var(--clr-blue-light);
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: .1rem;
+}
