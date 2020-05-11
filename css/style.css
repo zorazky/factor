@@ -2,6 +2,8 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 :root {
@@ -18,11 +20,13 @@ body {
 
 header {
     display: flex;
+   margin-top: 20px;
+   margin-bottom: 10px;
 }
 
 .logo img {
     width: 125px;
-    margin-top: 20px;
+    margin-top: 10px;
     margin-left: 20px;
     margin-right: 60px;
 }
@@ -39,7 +43,7 @@ header {
     font-size: 1.2rem;
     color: white;
     font-weight: 700;
-    margin-top: 25px;
+    margin-top: 15px;
 }
 
 .invoice-data p {
@@ -55,4 +59,27 @@ header {
     font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: .1rem;
+}
+
+.content {
+    margin: 0;
+    background-color: var(--clr-blue);
+    min-height: 80vh;
+    display: flex;
+}
+
+.side-bar {
+    width: 160px;
+}
+
+.info {
+    background-color: white;
+    width:420px;
+}
+
+.info .summary {
+    border: 1px solid var(--clr-grey);
+    padding:10px;
+    margin:20px;
+    border-radius: 4px;
 }
