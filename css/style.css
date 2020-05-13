@@ -10,7 +10,11 @@
     --clr-blue-dark: #09396A;
     --clr-blue-light: #8AC0F8;
     --clr-blue: #2163A8;
+    --clr-blue-subtle: #F9FAFF;
+    --clr-blue-grey: #8C99A6;
     --clr-grey: #D3D3D3;
+    --clr-grey-dark: #7C7C7C;
+    --clr-green: #33AC2E;
 }
 
 body {
@@ -20,15 +24,15 @@ body {
 
 header {
     display: flex;
-   margin-top: 20px;
-   margin-bottom: 10px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .logo img {
     width: 125px;
-    margin-top: 10px;
+    margin-top: 5px;
     margin-left: 20px;
-    margin-right: 60px;
+    margin-right: 40px;
 }
 
 .invoice-data {
@@ -42,8 +46,8 @@ header {
 .invoice-data h2 {
     font-size: 1.2rem;
     color: white;
-    font-weight: 700;
-    margin-top: 15px;
+    font-weight: 600;
+    margin-top: 10px;
 }
 
 .invoice-data p {
@@ -57,7 +61,7 @@ header {
 .invoice-data-num {
     color: var(--clr-blue-light);
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: .1rem;
 }
 
@@ -66,6 +70,11 @@ header {
     background-color: var(--clr-blue);
     min-height: 80vh;
     display: flex;
+}
+
+.pdf-view {
+    width: 45%;
+    background-color: var(--clr-blue-subtle);
 }
 
 .side-bar {
@@ -78,8 +87,276 @@ header {
 }
 
 .info .summary {
-    border: 1px solid var(--clr-grey);
-    padding:10px;
-    margin:20px;
+    border: 1px solid var(--clr-grey); 
+    margin: 20px;
     border-radius: 4px;
+}
+
+.summary h3 {
+    color: var(--clr-blue);
+    font-size: .9rem;
+    font-weight: 600;
+    border-bottom: 1px solid var(--clr-grey);
+    padding:5px 10px;
+    margin-bottom: 10px;
+}
+
+.summary-content {
+    display: flex;
+}
+
+.summary-left {
+    margin-right: 30px;
+    
+}
+
+.summary-el {
+    padding:8px 10px;
+    
+}
+
+.summary-el p {
+    font-size: .6rem;
+    color: var(--clr-grey-dark);
+    text-transform: uppercase;
+    margin-bottom:0;
+    letter-spacing: .08rem;
+}
+
+.summary-el span {
+    color: var(--clr-blue);
+    font-size: .8rem;
+    font-weight: 700;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin:20px;
+}
+
+form .form-el {
+    margin-top: 15px;
+}
+
+form label {
+    color: black;
+    font-size: .65rem;
+    letter-spacing: .08rem;
+    position: absolute;
+}
+
+form input {
+    height: 36px;
+    width: 275px;
+    border-radius: 4px;
+    border: 1px solid var(--clr-blue-grey);
+    background-color: var(--clr-blue-subtle);
+    color: var(--clr-blue-dark);
+    padding: 5px;
+    margin-top: 20px;
+    font-size: .9rem;
+}
+textarea {
+    width: 275px;
+    border-radius: 4px;
+    border: 1px solid var(--clr-blue-grey);
+    background-color: var(--clr-blue-subtle);
+    color: var(--clr-blue-dark);
+    color: var(--clr-blue-dark);
+    padding: 5px;
+    margin-top: 20px;
+    font-size: .9rem;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    position: relative;
+}
+nav ul li{
+    right: 0;
+    display: inline-block;
+}
+nav ul li label span {
+    float: right;
+    padding-top: 12px;
+    color: var(--clr-blue-dark);
+}
+
+a span {
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+    width: 15px;
+    height: 15px;
+    background-size: cover;
+   
+}
+h3 span {
+    float: right;
+    padding-top: 5px;
+}
+
+a span.ico-approve {
+    background-image: url('../img/ico_approve.png');
+}
+a span.ico-decline {
+    background-image: url('../img/ico_decline.png');
+}
+a span.ico-review {
+    background-image: url('../img/ico_review.png');
+}
+
+nav ul li label:hover span {
+    color: var(--clr-blue-light);
+}
+
+nav ul li a,
+nav ul li > label{
+    display: block;
+    color: white;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: .75rem;
+    padding: 8px 15px;
+    border-bottom: 1px solid var(--clr-blue-dark);
+}
+
+
+nav ul li ul li:last-child  a{
+    border-bottom: 1px solid var(--clr-blue-dark);
+}
+nav ul li ul a {
+    border-bottom:none;
+}
+nav ul li a:hover,
+nav ul li label:hover {
+    background-color: var(--clr-blue-dark);
+}
+a.nav-active {
+    background-color: var(--clr-blue-dark);
+}
+nav ul ul ul{
+    border-top: none;
+}
+nav ul li:hover > ul{
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 100%;
+    float: none;
+    display: list-item;
+}
+
+.show,.icon,nav input{
+    display: none;
+}
+.fa-plus{
+    font-size: 15px;
+    margin-left: 40px;
+}
+nav ul{
+    margin-right: 0px;
+    float: left;
+}
+nav .logo{
+    padding-left: 30px;
+    width: 100%;
+}
+.show + a{
+    display: none;
+}
+nav ul li,nav ul ul li{
+    display: block;
+    width: 100%;
+}
+
+.show {
+    display: block;
+    color: white;
+    line-height: 35px;
+    cursor: pointer;
+}
+.icon{
+    display: block;
+    color: white;
+    position: absolute;
+    top: 0;
+    right: 40px;
+    line-height: 35px;
+    cursor: pointer;
+    font-size: 25px;
+}
+nav ul ul{
+    top: 70px;
+    border-top: 0px;
+    float: none;
+    position: static;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul ul a{
+    
+}
+nav ul ul ul li{
+    position: static;
+}
+[id^=btn]:checked + ul{
+    display: block;
+}
+nav ul ul li{
+    border-bottom: 0px;
+}
+
+.invoice-options {
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.btn {
+    font-size: .8rem;
+    border: none;
+    color: white; 
+    font-weight: 600;
+    width: 120px;
+    cursor: pointer;
+}
+.btn:hover {
+    opacity: .8;
+}
+.btn-accept{
+    background-color: var(--clr-green);  
+}
+
+.btn-decline {
+    background-color: var(--clr-blue);
+}
+
+.btn-review {
+    color: var(--clr-blue);
+    background-color: var(--clr-blue-light);
+}
+
+.thumbs {
+    text-align: center;
+}
+
+.thumb-el {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.thumb-el a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.thumb-active {
+    background-color: rgba(9,57,106,.5);
 }
