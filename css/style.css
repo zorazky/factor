@@ -78,7 +78,7 @@ header {
 }
 
 .side-bar {
-    width: 160px;
+    min-width: 160px;
 }
 
 .info {
@@ -146,17 +146,42 @@ form label {
     position: absolute;
 }
 
-form input {
+form input,
+form select {
     height: 36px;
     width: 275px;
     border-radius: 4px;
     border: 1px solid var(--clr-blue-grey);
     background-color: var(--clr-blue-subtle);
     color: var(--clr-blue-dark);
-    padding: 5px;
+    padding: 8px;
     margin-top: 20px;
     font-size: .9rem;
+   
 }
+
+select {
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+select:hover,
+select:focus {
+  color: white;
+  background-color: var(--clr-blue-dark);
+}
+.form-el {
+    position: relative;
+}
+.select-icon {
+    position: absolute;
+    top: 30px;
+    left: 250px;
+    pointer-events: none; 
+    color: var(--clr-blue);
+  }
+
 textarea {
     width: 275px;
     border-radius: 4px;
@@ -172,6 +197,7 @@ nav ul{
     float: right;
     list-style: none;
     position: relative;
+    width: 100%;
 }
 nav ul li{
     right: 0;
@@ -239,18 +265,8 @@ a.nav-active {
 nav ul ul ul{
     border-top: none;
 }
-nav ul li:hover > ul{
-    top: 70px;
-    opacity: 1;
-    visibility: visible;
-}
-nav ul ul li{
-    position: relative;
-    margin: 0px;
-    width: 100%;
-    float: none;
-    display: list-item;
-}
+
+
 
 .show,.icon,nav input{
     display: none;
@@ -263,10 +279,7 @@ nav ul{
     margin-right: 0px;
     float: left;
 }
-nav .logo{
-    padding-left: 30px;
-    width: 100%;
-}
+
 .show + a{
     display: none;
 }
@@ -292,7 +305,6 @@ nav ul li,nav ul ul li{
     font-size: 25px;
 }
 nav ul ul{
-    top: 70px;
     border-top: 0px;
     float: none;
     position: static;
@@ -300,17 +312,8 @@ nav ul ul{
     opacity: 1;
     visibility: visible;
 }
-nav ul ul a{
-    
-}
-nav ul ul ul li{
-    position: static;
-}
 [id^=btn]:checked + ul{
     display: block;
-}
-nav ul ul li{
-    border-bottom: 0px;
 }
 
 .invoice-options {
