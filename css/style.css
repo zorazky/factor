@@ -74,6 +74,7 @@ header {
 
 .pdf-view {
     width: 45%;
+    flex-grow:2;
     background-color: var(--clr-blue-subtle);
 }
 
@@ -180,7 +181,28 @@ select:focus {
     left: 250px;
     pointer-events: none; 
     color: var(--clr-blue);
-  }
+}
+.notes-icon {
+    font-weight: 700;
+    font-size: .85rem;
+    color: var(--clr-blue-dark);
+    padding-top: 5px;
+    padding-right: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    right: 60px;
+    width: 24px;
+    height: 31px;
+    background-image: url('../img/ico_notes.png');
+    cursor: pointer;
+}
+
+.notes-icon:hover {
+    opacity: .65;
+}
 
 textarea {
     width: 275px;
@@ -347,6 +369,7 @@ nav ul ul{
 
 .thumbs {
     text-align: center;
+    max-width: 110px;
 }
 
 .thumb-el {
@@ -362,4 +385,58 @@ nav ul ul{
 
 .thumb-active {
     background-color: rgba(9,57,106,.5);
+}
+
+.modal {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(130, 130, 130, .5);
+    top: 0; 
+    left: 0; 
+    position: fixed; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-box {
+   width: 600px;
+   background-color: white; 
+   border-radius: 4px;
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.modal-box h2 {
+    color: var(--clr-blue);
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.modal-box ul {
+    text-decoration: none;
+    list-style: none;
+    padding-bottom: 20px;
+}
+
+.note {
+    padding: 10px;
+    margin: 10px;
+    background-color: var(--clr-blue-subtle);
+    border-radius: 4px;
+    color: var(--clr-grey-dark);
+    font-size: .9rem;
+}
+
+.close-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--clr-blue);
+    cursor: pointer;
 }
